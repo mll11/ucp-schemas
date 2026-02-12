@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://ucp.dev/schemas/shopping/checkout.json",
+  "$id": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/shopping/checkout.json",
   "name": "dev.ucp.shopping.checkout",
   "version": "2026-01-11",
   "title": "Checkout Response",
