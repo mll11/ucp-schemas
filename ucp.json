@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://ucp.dev/schemas/ucp.json",
+  "$id": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/ucp.json",
   "title": "UCP Metadata",
   "description": "Protocol metadata for discovery profiles and responses. Uses slim schema pattern with context-specific required fields.",
   "$defs": {
@@ -23,10 +23,10 @@
       "required": ["version", "services", "capabilities"],
       "properties": {
         "version": {
-          "$ref": "https://ucp.dev/schemas/ucp.json#/$defs/version"
+          "$ref": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/ucp.json#/$defs/version"
         },
         "services": {
-          "$ref": "https://ucp.dev/schemas/ucp.json#/$defs/services"
+          "$ref": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/ucp.json#/$defs/services"
         },
         "capabilities": {
           "type": "array",
@@ -44,7 +44,7 @@
       "required": ["version", "capabilities"],
       "properties": {
         "version": {
-          "$ref": "https://ucp.dev/schemas/ucp.json#/$defs/version"
+          "$ref": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/ucp.json#/$defs/version"
         },
         "capabilities": {
           "type": "array",
@@ -62,7 +62,7 @@
       "required": ["version", "capabilities"],
       "properties": {
         "version": {
-          "$ref": "https://ucp.dev/schemas/ucp.json#/$defs/version"
+          "$ref": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/#/$defs/version"
         },
         "capabilities": {
           "type": "array",
