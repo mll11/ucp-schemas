@@ -20,11 +20,7 @@
       "title": "UCP Discovery Profile",
       "description": "Full UCP metadata for /.well-known/ucp discovery.",
       "type": "object",
-      "required": [
-        "version",
-        "services",
-        "capabilities"
-      ],
+      "required": ["version", "services", "capabilities"],
       "properties": {
         "version": {
           "$ref": "https://ucp.dev/schemas/ucp.json#/$defs/version"
@@ -45,10 +41,7 @@
       "title": "UCP Checkout Response",
       "description": "UCP metadata for checkout responses.",
       "type": "object",
-      "required": [
-        "version",
-        "capabilities"
-      ],
+      "required": ["version", "capabilities"],
       "properties": {
         "version": {
           "$ref": "https://ucp.dev/schemas/ucp.json#/$defs/version"
@@ -66,10 +59,7 @@
       "title": "UCP Order Response",
       "description": "UCP metadata for order responses. No payment handlers needed post-purchase.",
       "type": "object",
-      "required": [
-        "version",
-        "capabilities"
-      ],
+      "required": ["version", "capabilities"],
       "properties": {
         "version": {
           "$ref": "https://ucp.dev/schemas/ucp.json#/$defs/version"
