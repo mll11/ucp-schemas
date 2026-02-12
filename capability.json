@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://ucp.dev/schemas/capability.json",
+  "$id": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/capability.json",
   "title": "UCP Capability",
   "description": "Schema for UCP capabilities and extensions. Extensions are capabilities with an 'extends' field. Uses reverse-domain naming for governance.",
   "$defs": {
@@ -13,7 +13,7 @@
           "description": "Stable capability identifier in reverse-domain notation (e.g., dev.ucp.shopping.checkout). Used in capability negotiation."
         },
         "version": {
-          "$ref": "https://ucp.dev/schemas/ucp.json#/$defs/version",
+          "$ref": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/ucp.json#/$defs/version",
           "description": "Capability version in YYYY-MM-DD format."
         },
         "spec": {
@@ -42,15 +42,10 @@
       "description": "Full capability declaration for discovery profiles. Includes spec/schema URLs for agent fetching.",
       "allOf": [
         {
-          "$ref": "https://ucp.dev/schemas/capability.json#/$defs/base"
+          "$ref": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/capability.json#/$defs/base"
         },
         {
-          "required": [
-            "name",
-            "version",
-            "spec",
-            "schema"
-          ]
+          "required": ["name", "version", "spec", "schema"]
         }
       ]
     },
@@ -59,13 +54,10 @@
       "description": "Capability reference in responses. Only name/version required to confirm active capabilities.",
       "allOf": [
         {
-          "$ref": "https://ucp.dev/schemas/capability.json#/$defs/base"
+          "$ref": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/capability.json#/$defs/base"
         },
         {
-          "required": [
-            "name",
-            "version"
-          ]
+          "required": ["name", "version"]
         }
       ]
     }
