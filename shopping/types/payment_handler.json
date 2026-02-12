@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://ucp.dev/schemas/shopping/types/payment_handler.json",
+  "$id": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/shopping/types/payment_handler.json",
   "title": "Payment Handler Response",
   "type": "object",
   "required": [
@@ -22,7 +22,7 @@
       "description": "The specification name using reverse-DNS format. For example, dev.ucp.delegate_payment."
     },
     "version": {
-      "$ref": "https://ucp.dev/schemas/ucp.json#/$defs/version",
+      "$ref": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/ucp.json#/$defs/version",
       "description": "Handler version in YYYY-MM-DD format."
     },
     "spec": {
