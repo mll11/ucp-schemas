@@ -13,7 +13,7 @@
       "type": "object",
       "description": "Service definitions keyed by reverse-domain service name.",
       "additionalProperties": {
-        "$ref": "https://ucp.dev/schemas/service.json"
+        "$ref": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/service.json"
       }
     },
     "discovery_profile": {
@@ -32,7 +32,7 @@
           "type": "array",
           "description": "Supported capabilities and extensions.",
           "items": {
-            "$ref": "https://ucp.dev/schemas/capability.json#/$defs/discovery"
+            "$ref": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/capability.json#/$defs/discovery"
           }
         }
       }
@@ -50,7 +50,7 @@
           "type": "array",
           "description": "Active capabilities for this response.",
           "items": {
-            "$ref": "https://ucp.dev/schemas/capability.json#/$defs/response"
+            "$ref": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/capability.json#/$defs/response"
           }
         }
       }
@@ -62,13 +62,13 @@
       "required": ["version", "capabilities"],
       "properties": {
         "version": {
-          "$ref": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/#/$defs/version"
+          "$ref": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/ucp.json#/$defs/version"
         },
         "capabilities": {
           "type": "array",
           "description": "Active capabilities for this response.",
           "items": {
-            "$ref": "https://ucp.dev/schemas/capability.json#/$defs/response"
+            "$ref": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/capability.json#/$defs/response"
           }
         }
       }
