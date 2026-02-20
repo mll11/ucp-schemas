@@ -6,9 +6,15 @@
   "title": "Checkout Response",
   "description": "Base checkout schema. Extensions compose onto this using allOf.",
   "type": "object",
-  "required": ["id"],
+  "required": [
+    "ucp", 
+    "id"
+  ],
   "additionalProperties": true,
   "properties": {
+    "ucp": {
+      "$ref": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/ucp.json#/$defs/response_checkout_schema"
+    },
     "id": {
       "type": "string",
       "description": "Unique identifier of the checkout session."
