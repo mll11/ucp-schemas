@@ -9,7 +9,8 @@
   "required": [
     "ucp",
     "id",
-    "line_items"
+    "line_items",
+    "status"
   ],
   "additionalProperties": true,
   "properties": {
@@ -30,6 +31,18 @@
     "buyer": {
       "$ref": "https://ucp.dev/2026-01-23/schemas/shopping/types/buyer.json",
       "description": "Representation of the buyer."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "incomplete",
+        "requires_escalation",
+        "ready_for_complete",
+        "complete_in_progress",
+        "completed",
+        "canceled"
+      ],
+      "description": "Checkout state indicating the current phase and required action. See Checkout Status lifecycle documentation for state transition details."
     }
   }
 }
