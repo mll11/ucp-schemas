@@ -10,7 +10,7 @@
   "additionalProperties": true,
   "properties": {
     "payment": {
-      "$ref": "https://ucp.dev/2026-01-23/schemas/shopping/payment.json"
+      "$ref": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/shopping/payment.json"
     }
   }
 }
