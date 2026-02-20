@@ -11,7 +11,8 @@
     "id",
     "line_items",
     "status",
-    "currency"
+    "currency",
+    "totals"
   ],
   "additionalProperties": true,
   "properties": {
@@ -48,6 +49,13 @@
     "currency": {
       "type": "string",
       "description": "ISO 4217 currency code reflecting the merchant's market determination. Derived from address, context, and geo IP—buyers provide signals, merchants determine currency."
+    },
+    "totals": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ucp.dev/2026-01-23/schemas/shopping/types/total.json"
+      },
+      "description": "Different cart totals."
     }
   }
 }
