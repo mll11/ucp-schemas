@@ -71,6 +71,16 @@
         "$ref": "https://ucp.dev/2026-01-23/schemas/shopping/types/link.json"
       },
       "description": "Links to be displayed by the platform (Privacy Policy, TOS). Mandatory for legal compliance."
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "RFC 3339 expiry timestamp. Default TTL is 6 hours from creation if not sent."
+    },
+    "continue_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL for checkout handoff and session recovery. MUST be provided when status is requires_escalation. See specification for format and availability requirements."
     }
   }
 }
