@@ -7,8 +7,9 @@
   "description": "Base checkout schema. Extensions compose onto this using allOf.",
   "type": "object",
   "required": [
-    "ucp", 
-    "id"
+    "ucp",
+    "id",
+    "line_items"
   ],
   "additionalProperties": true,
   "properties": {
@@ -18,6 +19,13 @@
     "id": {
       "type": "string",
       "description": "Unique identifier of the checkout session."
+    },
+    "line_items": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ucp.dev/2026-01-23/schemas/shopping/types/line_item.json"
+      },
+      "description": "List of line items being checked out."
     }
   }
 }
