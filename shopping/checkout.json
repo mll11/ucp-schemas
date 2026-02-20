@@ -81,6 +81,10 @@
       "type": "string",
       "format": "uri",
       "description": "URL for checkout handoff and session recovery. MUST be provided when status is requires_escalation. See specification for format and availability requirements."
+    },
+    "order": {
+      "$ref": "https://ucp.dev/2026-01-23/schemas/shopping/types/order_confirmation.json",
+      "description": "Details about an order created for this checkout session."
     }
   }
 }
