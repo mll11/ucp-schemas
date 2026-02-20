@@ -10,7 +10,8 @@
     "ucp",
     "id",
     "line_items",
-    "status"
+    "status",
+    "currency"
   ],
   "additionalProperties": true,
   "properties": {
@@ -43,6 +44,10 @@
         "canceled"
       ],
       "description": "Checkout state indicating the current phase and required action. See Checkout Status lifecycle documentation for state transition details."
+    },
+    "currency": {
+      "type": "string",
+      "description": "ISO 4217 currency code reflecting the merchant's market determination. Derived from address, context, and geo IP—buyers provide signals, merchants determine currency."
     }
   }
 }
