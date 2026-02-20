@@ -107,7 +107,7 @@
                   "const": "embedded"
                 },
                 "config": {
-                  "$ref": "https://ucp.dev/schemas/transports/embedded_config.json"
+                  "$ref": "https://ucp.dev/2026-01-23/schemas/transports/embedded_config.json"
                 }
               }
             }
@@ -151,7 +151,7 @@
                   "const": "embedded"
                 },
                 "config": {
-                  "$ref": "https://ucp.dev/schemas/transports/embedded_config.json"
+                  "$ref": "https://ucp.dev/2026-01-23/schemas/transports/embedded_config.json"
                 }
               }
             }
