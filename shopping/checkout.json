@@ -18,7 +18,7 @@
   "additionalProperties": true,
   "properties": {
     "ucp": {
-      "$ref": "https://ucp.dev/2026-01-23/schemas/ucp.json#/$defs/response_checkout_schema"
+      "$ref": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/ucp.json#/$defs/response_checkout_schema"
     },
     "id": {
       "type": "string",
