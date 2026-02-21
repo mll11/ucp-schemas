@@ -32,7 +32,7 @@
       "description": "List of line items being checked out."
     },
     "buyer": {
-      "$ref": "https://ucp.dev/2026-01-23/schemas/shopping/types/buyer.json",
+      "$ref": "https://ucp.dev/schemas/shopping/types/buyer.json",
       "description": "Representation of the buyer."
     },
     "status": {
