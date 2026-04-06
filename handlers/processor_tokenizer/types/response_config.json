@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/handlers/processor_tokenizer/types/response_config.json",
+  "title": "Tokenizer Response Config",
+  "type": "object",
+  "properties": {
+    "environment": {
+      "type": "string",
+      "enum": ["sandbox", "production"]
+    },
+    "business_id": {
+      "type": "string",
+      "description": "Business identifier for this handler."
+    },
+    "available_instruments": {
+      "type": "array",
+      "description": "Available instrument types for this checkout.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string" },
+          "token_credential": {
+            "$ref": "https://ucp.dev/2026-01-23/schemas/shopping/types/token_credential.json"
+          }
+        }
+      }
+    }
+  }
+}
