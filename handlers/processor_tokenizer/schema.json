@@ -7,23 +7,7 @@
   "version": "2026-01-23",
 
   "$defs": {
-    "tokenizer_token": { "$ref": "types/tokenizer_token.json" },
-    "tokenizer_alt_token": { "$ref": "types/tokenizer_alt_token.json" },
-
-    "tokenizer_instrument": { "$ref": "types/tokenizer_instrument.json" },
-    "tokenizer_alt_instrument": {
-      "$ref": "types/tokenizer_alt_instrument.json"
-    },
-
     "com.example.processor_tokenizer": {
-      "payment_instrument": {
-        "title": "Tokenizer Payment Instrument",
-        "description": "Any instrument type supported by this handler.",
-        "oneOf": [
-          { "$ref": "#/$defs/tokenizer_instrument" },
-          { "$ref": "#/$defs/tokenizer_alt_instrument" }
-        ]
-      },
       "platform_schema": {
         "title": "Tokenizer (Platform)",
         "description": "Platform-level handler configuration for discovery.",
