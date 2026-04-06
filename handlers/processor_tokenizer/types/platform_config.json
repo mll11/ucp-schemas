@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/handlers/processor_tokenizer/types/platform_config.json",
+  "title": "Tokenizer Platform Config",
+  "type": "object",
+  "properties": {
+    "environment": {
+      "type": "string",
+      "enum": ["sandbox", "production"],
+      "default": "production"
+    },
+    "platform_id": {
+      "type": "string",
+      "description": "Platform identifier for this handler."
+    }
+  }
+}
