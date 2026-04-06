@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/mll11/ucp-schemas/refs/heads/master/handlers/processor_tokenizer/schema.json",
+  "title": "Tokenizer Handler Schema",
+  "description": "Schema for the com.example.processor_tokenizer payment handler.",
+  "name": "com.example.processor_tokenizer",
+  "version": "2026-01-23",
+
+  "$defs": {
+    "tokenizer_token": { "$ref": "types/tokenizer_token.json" },
+    "tokenizer_alt_token": { "$ref": "types/tokenizer_alt_token.json" },
+
+    "tokenizer_instrument": { "$ref": "types/tokenizer_instrument.json" },
+    "tokenizer_alt_instrument": {
+      "$ref": "types/tokenizer_alt_instrument.json"
+    },
+
+    "com.example.processor_tokenizer": {
+      "payment_instrument": {
+        "title": "Tokenizer Payment Instrument",
+        "description": "Any instrument type supported by this handler.",
+        "oneOf": [
+          { "$ref": "#/$defs/tokenizer_instrument" },
+          { "$ref": "#/$defs/tokenizer_alt_instrument" }
+        ]
+      },
+      "platform_schema": {
+        "title": "Tokenizer (Platform)",
+        "description": "Platform-level handler configuration for discovery.",
+        "allOf": [
+          {
+            "$ref": "https://ucp.dev/2026-01-23/schemas/payment_handler.json#/$defs/platform_schema"
+          },
+          {
+            "properties": {
+              "config": {
+                "$ref": "types/platform_config.json",
+                "description": "Platform configuration for this handler."
+              }
+            }
+          }
+        ]
+      },
+      "business_schema": {
+        "title": "Tokenizer (Business)",
+        "description": "Business-level handler configuration for discovery.",
+        "allOf": [
+          {
+            "$ref": "https://ucp.dev/2026-01-23/schemas/payment_handler.json#/$defs/business_schema"
+          },
+          {
+            "properties": {
+              "config": {
+                "$ref": "types/business_config.json",
+                "description": "Business configuration for this handler."
+              }
+            }
+          }
+        ]
+      },
+      "response_schema": {
+        "title": "Tokenizer (Response)",
+        "description": "Runtime handler configuration in checkout responses.",
+        "allOf": [
+          {
+            "$ref": "https://ucp.dev/2026-01-23/schemas/payment_handler.json#/$defs/response_schema"
+          },
+          {
+            "properties": {
+              "config": {
+                "$ref": "types/response_config.json",
+                "description": "Runtime configuration for this handler."
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
